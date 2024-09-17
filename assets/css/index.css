@@ -6465,9 +6465,11 @@ https://flickity.metafizzy.co
 
 .Page-footer-columns {
     flex-shrink: 0;
-    height: 0;
+    height: 100%;
+    margin: 0 15px;
+
     overflow: hidden;
-    transition: all .3s ease
+    transition: all .3s ease;
 }
 
 .Page-footer-columns.toggled {
@@ -18370,7 +18372,8 @@ body:before {
 
 .Page-footer-columns {
     flex-shrink: 0;
-    height: 0;
+    height: 100%;
+    margin: 0 15px;
     overflow: hidden;
     transition: all .3s ease
 }

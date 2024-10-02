@@ -304,8 +304,26 @@
                 cursor: pointer;
             }
     </style>
-    <link href="assets/css/flow.css" rel="stylesheet">
-    <link href="assets/css/funnel.css" rel="stylesheet">
+        <link href="assets/css/flow.css" rel="stylesheet" />
+        <link href="assets/css/funnel.css" rel="stylesheet" />
+        <title>Immediate Gain</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <style>
+            @media all and (min-width: 768px) {
+                .how-it-works-section {
+                    margin-top: 300px;
+                }
+            }
+
+            .form-footer {
+                padding-top: 20px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                color: #222;
+                font-family: Roboto, sans-serif;
+            }
+        </style>
 
     <style type="text/css">
         [data-modulelist='noticias'] {
@@ -2195,7 +2213,142 @@
             document.querySelector("#popup_form").classList.remove("d-flex")
         })
     </script>
-    <script src="form.js"></script>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .vld-overlay {
+                text-align: center;
+            }
+
+            .form-group,
+            .col-md-6.form-group {
+                width: 100%;
+                max-width: 100%;
+                flex: 0 0 100%;
+                margin-bottom: 10px;
+            }
+
+            #form > button {
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                background-color: #007bff !important;
+                color: #fff !important;
+                min-height: 48px;
+                font-size: 20px;
+                opacity: 1;
+            }
+
+            form .row {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            label.control-label,
+            #gaff > form > div:nth-child(11) > div:nth-child(1) {
+                display: none;
+            }
+
+            /*.form-side .fw-body .form-group { margin-bottom:10px!important; }
+#form > div:nth-child(10) { display:flex;justify-content:space-between; }
+#form > div:nth-child(10) > div:nth-child(1) { padding-right:5px; }
+#form > div:nth-child(10) > div:nth-child(2) { padding-left:5px; }*/
+            .form-control {
+                border: 3px solid #6bfff7 !important;
+                padding: 0px !important;
+                margin-bottom: 0px;
+                text-indent: 10px;
+                width: 100%;
+                min-height: 40px;
+            }
+
+            #form > div:nth-child(12) > div:nth-child(1) {
+                margin-bottom: 0;
+            }
+
+            .checkbox {
+                margin-bottom: 10px;
+                display: none;
+            }
+
+            .checkbox a {
+                position: relative;
+                left: 5px;
+                top: -2px;
+                font-size: 13px;
+            }
+
+            .valid {
+                border: 1px solid green;
+                background-color: white !important;
+            }
+
+            .notvalid {
+                border: 1px solid red !important;
+            }
+
+            .notvalidphone {
+                background-color: rgb(253, 164, 164) !important;
+                border: 1px solid red !important;
+            }
+
+            .initial {
+                border: 1px solid gray !important;
+            }
+
+            @media (max-width: 1050px) {
+                .article__precontent,
+                .article__news {
+                    display: block;
+                }
+            }
+        </style>
+
+        <script>
+            var formConf = { pass: false, btnTxt: "Register Now" };
+            function generatePassword() {
+                var length = 5,
+                    charset =
+                        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+                    retVal = "";
+                for (var i = 0, n = charset.length; i < length; ++i) {
+                    retVal += charset.charAt(Math.floor(Math.random() * n));
+                }
+                return retVal + "eG6";
+            }
+
+            document.addEventListener("build", function () {
+                if (formConf.btnTxt !== undefined) {
+                    jQuery("button.btn.btn-danger.btn-lg.tradeBtn").text(
+                        formConf.btnTxt
+                    );
+                }
+
+                jQuery("input.form-control.bfh-password")
+                    .css({ display: "none" })
+                    .attr("value", generatePassword());
+                jQuery(".bfh-phone").focus(function () {
+                    jQuery(this).trigger("change");
+                });
+                jQuery(".bfh-phone").attr("autocomplete", "off");
+            });
+        </script>
+        <script>
+            gvars = {
+                gi: 86,
+                ci: 1,
+                wl: 17,
+                ap: 0,
+                ae: 0,
+                lg: "fr",
+                ai: 2958156
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.6.0/webcomponents-loader.js"></script>
+        <script src="form.js"></script>
 </body>
 
 </html>
